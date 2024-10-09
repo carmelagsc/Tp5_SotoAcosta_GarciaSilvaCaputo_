@@ -1,5 +1,8 @@
-# Tp5_SotoAcosta_GarciaSilva
+# Tp5: Bases de datos + Manejo de Versiones
 
-##ALumnas
-###Bianca Soto Acosta
-###Carmela García Silva Caputo 
+
+## **Alumnas:**
+
+* Bianca Soto Acosta
+
+* Carmela García Silva Caputo 
