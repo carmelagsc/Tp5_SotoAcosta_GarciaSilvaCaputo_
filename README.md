@@ -3,6 +3,6 @@
 
 ## **Alumnas:**
 
-* Bianca Soto Acosta
+* Bianca Jocelyn Soto Acosta 62535
 
 * Carmela García Silva Caputo 
