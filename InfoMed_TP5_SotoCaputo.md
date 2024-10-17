@@ -1,4 +1,15 @@
- # **Parte 2: SQL**
+# **Parte 1: Base de datos ** 
+1) *¿Qué tipo de base de datos es? Clasificarla según estructura y función.*
+
+ La estructura de la base de datos es relacional y su función es transaccional. 
+ 
+2) Diagrama entidad/relación: 
+
+<p align="center">
+   <img src="imágenes/Diagrama entidad-Relación.jpg" alt="Diagrama entidad relación">
+  </p>
+ 
+# **Parte 2: SQL**
 
  1) *Cuando se realizan consultas sobre la tabla paciente agrupando por ciudad los tiempos de respuesta son demasiado largos. Proponer mediante una query SQL una
 solución a este problema.*
