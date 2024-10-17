@@ -29,6 +29,10 @@ Código SQL:
 
     CREATE INDEX idx_ciudades ON Pacientes(ciudad);
 
+<p align="center">
+   <img src="imágenes/ejercicio1.png" alt="Modelo relacional">
+  </p>
+
  2) *Se tiene la fecha de nacimiento de los pacientes. Se desea calcular la edad de los
 pacientes y almacenarla de forma dinámica en el sistema ya que es un valor
 típicamente consultado, junto con otra información relevante del paciente.*
@@ -65,6 +69,10 @@ Código SQL:
     SELECT nombre, matricula
     FROM Medicos
     WHERE especialidad_id = 4
+ 
+<p align="center">
+   <img src="imágenes/ejercicio4.png" alt="Resultado del ejercicio 4">
+  </p>
 
 5) *Puede pasar que haya inconsistencias en la forma en la que están escritos los
 nombres de las ciudades, ¿cómo se corrige esto? Agregar la query correspondiente.* 
@@ -80,6 +88,10 @@ Cógido SQL:
           ELSE 'Santa Fé'
       END;
 
+<p align="center">
+   <img src="imágenes/ejercicio5.png" alt="Resultado del ejercicio 5">
+  </p>
+ 
 6) *Obtener el nombre y la dirección de los pacientes que viven en Buenos Aires.*
 
 Código SQL:
@@ -87,6 +99,10 @@ Código SQL:
     SELECT nombre, numero, calle, ciudad
     FROM pacientes
     WHERE ciudad = 'Buenos Aires'
+
+<p align="center">
+   <img src="imágenes/ejercicio6.png" alt="Resultado del ejercicio 6">
+  </p>
 
 7) *Cantidad de pacientes que viven en cada ciudad.*
 
@@ -104,6 +120,10 @@ Código SQL:
         FROM pacientes
         GROUP BY region, ciudad;
 
+<p align="center">
+   <img src="imágenes/ejercicio7.png" alt="Resultado del ejercicio 7">
+  </p>
+  
 8) *Cantidad de pacientes por sexo que viven en cada ciudad.* 
 
 Código SQL:
@@ -122,6 +142,10 @@ Código SQL:
     FROM pacientes
     GROUP BY region, ciudad, id_sexo;
 
+<p align="center">
+   <img src="imágenes/ejercicio8.png" alt="Resultado del ejercicio 8">
+  </p>
+  
 9) *Obtener la cantidad de recetas emitidas por cada médico.*
 
 Código SQL: 
@@ -130,6 +154,12 @@ Código SQL:
             COUNT(id_receta) AS cantidad_recetas
         FROM recetas
         GROUP BY id_medico;
+
+<p align="center">
+   <img src="imágenes/ejercicio9.png" alt="Resultado del ejercicio 9">
+  </p>
+
+   
 10) *Obtener todas las consultas médicas realizadas por el médico con ID igual a 3
 durante el mes de agosto de 2024.*
 
@@ -140,6 +170,10 @@ Código SQL:
     WHERE id_medico = 3
     AND fecha BETWEEN '2024-08-01' AND '2024-08-31';
 
+<p align="center">
+   <img src="imágenes/ejercicio10.png" alt="Modelo relacional">
+  </p>
+
 11) *Obtener el nombre de los pacientes junto con la fecha y el diagnóstico de todas las
 consultas médicas realizadas en agosto del 2024.*
 
@@ -149,6 +183,12 @@ Código SQL:
     FROM consultas
     JOIN pacientes ON consultas.id_paciente = pacientes.id_paciente
     WHERE consultas.fecha BETWEEN '2024-08-01' AND '2024-08-31';
+
+ <p align="center">
+   <img src="imágenes/ejercicio11-1.png" alt="Resultado del ejercicio 11">
+   <img src="imágenes/ejercicio11-2.png" alt="Resultado del ejercicio 11">
+  </p>
+
 
 12) *Obtener el nombre de los medicamentos prescritos más de una vez por el médico
 con ID igual a 2.* 
@@ -164,6 +204,11 @@ Código SQL:
     HAVING 
         COUNT(*) > 1;
 
+ <p align="center">
+   <img src="imágenes/ejercicio12.png" alt="Resultado del ejercicio 12">
+  
+  </p>
+  
   13)  *Obtener el nombre de los pacientes junto con la cantidad total de recetas que han
 recibido.*
 
@@ -174,6 +219,11 @@ Código SQL:
     FROM pacientes
     LEFT JOIN recetas ON pacientes.id_paciente = recetas.id_paciente
     GROUP BY pacientes.id_paciente, pacientes.nombre;
+
+ <p align="center">
+   <img src="imágenes/ejercicio13-1.png" alt="Resultado del ejercicio 13">
+   <img src="imágenes/ejercicio13-2.png" alt="Resultado del ejercicio 13">
+  </p>
 
 14) *Obtener el nombre del medicamento más recetado junto con la cantidad de recetas
 emitidas para ese medicamento.*
@@ -188,6 +238,10 @@ Código SQL:
         ORDER BY cantidad_recetas DESC
         LIMIT 1;
 
+ <p align="center">
+   <img src="imágenes/ejercicio14.png" alt="Resultado del ejercicio 14">
+  </p>
+  
 15) *Obtener el nombre del paciente junto con la fecha de su última consulta y el
 diagnóstico asociado.*
 
@@ -198,7 +252,10 @@ Código SQL:
     JOIN consultas ON pacientes.id_paciente = consultas.id_paciente
     WHERE consultas.fecha = (SELECT MAX(fecha) FROM consultas WHERE id_paciente = pacientes.id_paciente);
 
-  
+  <p align="center">
+   <img src="imágenes/ejercicio15-1.png" alt="Resultado del ejercicio 15">
+   <img src="imágenes/ejercicio15-2.png" alt="Resultado del ejercicio 15">
+  </p> 
 
 16) *Obtener el nombre del médico junto con el nombre del paciente y el número total de
 consultas realizadas por cada médico para cada paciente, ordenado por médico y
@@ -213,6 +270,12 @@ Código SQL:
     JOIN pacientes ON consultas.id_paciente = pacientes.id_paciente
     GROUP BY medicos.id_medico, pacientes.id_paciente
     ORDER BY medicos.nombre, pacientes.nombre;
+
+ <p align="center">
+   <img src="imágenes/ejercicio16-1.png" alt="Resultado del ejercicio 16">
+   <img src="imágenes/ejercicio16-2.png" alt="Resultado del ejercicio 16">
+   <img src="imágenes/ejercicio16-3.png" alt="Resultado del ejercicio 16">
+  </p>
 
 17) *Obtener el nombre del medicamento junto con el total de recetas prescritas para ese
 medicamento, el nombre del médico que lo recetó y el nombre del paciente al que se
@@ -229,6 +292,10 @@ Código SQL:
     GROUP BY medicamentos.id_medicamento, medicos.id_medico, pacientes.id_paciente
     ORDER BY total_recetas DESC;
 
+ <p align="center">
+   <img src="imágenes/ejercicio17-1.png" alt="Resultado del ejercicio 17">
+   <img src="imágenes/ejercicio17-2.png" alt="Resultado del ejercicio 17">
+  </p> 
 
 18) *Obtener el nombre del médico junto con el total de pacientes a los que ha atendido,
 ordenado por el total de pacientes en orden descendente.*
@@ -242,7 +309,9 @@ Código SQL:
     GROUP BY medicos.id_medico, medicos.nombre
     ORDER BY total_pacientes DESC;
 
-
+ <p align="center">
+   <img src="imágenes/ejercicio18.png" alt="Resultado del ejercicio 18">
+  </p> 
 
 
 
