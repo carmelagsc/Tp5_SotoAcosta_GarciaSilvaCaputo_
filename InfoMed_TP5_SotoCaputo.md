@@ -1,4 +1,4 @@
-# **Parte 1: Base de datos ** 
+# **Parte 1: Base de datos** 
 1) *¿Qué tipo de base de datos es? Clasificarla según estructura y función.*
 
  La estructura de la base de datos es relacional y su función es transaccional. 
