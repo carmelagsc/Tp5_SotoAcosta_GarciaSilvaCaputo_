@@ -14,7 +14,12 @@
    <img src="imágenes/modelo_relacional.drawio.png" alt="Modelo relacional">
   </p>
 
- 
+4) *¿Considera que la base de datos está normalizada? En caso que no lo esté, ¿cómo
+podría hacerlo? Nota: no debe normalizar la base de datos, solo explicar como lo
+haría.*
+
+La base de datos no está normalizada, esto se puede ver especialmente con las ciudades en la cual viven los pacientes. Una misma ciudad tiene distintas formas de ser escrita, lo que complica la búsqueda o se pueden tener resultados erróneos si no se toma en cuenta. Una forma de solucionar estos problemas es tener una tabla de ciudades predeterminadas y la tabla de paciente hace referencia a la tabla de ciudades. Por ejemplo si la PK 1 en la tabla de ciudades corresponde a la ciudad de La Plata esta se encuentre como Fk en la tabla de pacientes. 
+
 # **Parte 2: SQL**
 
  1) *Cuando se realizan consultas sobre la tabla paciente agrupando por ciudad los tiempos de respuesta son demasiado largos. Proponer mediante una query SQL una
