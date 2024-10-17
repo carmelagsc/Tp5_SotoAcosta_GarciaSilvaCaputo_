@@ -8,6 +8,12 @@
 <p align="center">
    <img src="imágenes/Diagrama entidad-Relación.jpg" alt="Diagrama entidad relación">
   </p>
+
+3) Modelo relacional
+<p align="center">
+   <img src="imágenes/modelo_relacional.drawio.png" alt="Modelo relacional">
+  </p>
+
  
 # **Parte 2: SQL**
 
