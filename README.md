@@ -7,6 +7,6 @@
 
 * Carmela García Silva Caputo 62124
 
-Link al tablero
+[Link al tablero](https://lookerstudio.google.com/s/vJ2qlwIP-4g)
 
 Link al google sheets
