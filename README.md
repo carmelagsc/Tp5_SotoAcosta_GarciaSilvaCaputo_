@@ -21,4 +21,4 @@
 
 [Link al tablero](https://lookerstudio.google.com/s/vJ2qlwIP-4g)
 
-[Link al google sheet](shttps://docs.google.com/spreadsheets/d/1mndEZ1ExV7YyjxHOcqWXsxIFlrafnDbe9w99iSAN03Y/edit?usp=drivesdk)
+[Link al google sheet](https://docs.google.com/spreadsheets/d/1mndEZ1ExV7YyjxHOcqWXsxIFlrafnDbe9w99iSAN03Y/edit?usp=sharing)
