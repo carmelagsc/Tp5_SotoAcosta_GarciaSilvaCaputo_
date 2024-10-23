@@ -1,10 +1,9 @@
-# 16.22 Informática Médica - ITBA 2024 2C
-
-# Tp5: Bases de datos + Manejo de Versiones
-
 <p align="center">
    <img src="imágenes/logo itba.png" >
   </p>
+# 16.22 Informática Médica - ITBA 2024 2C
+
+# Tp5: Bases de datos + Manejo de Versiones
 
 ## **Alumnas:**
 
