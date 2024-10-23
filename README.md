@@ -3,7 +3,7 @@
 # Tp5: Bases de datos + Manejo de Versiones
 
 <p align="center">
-   <img src="imágenes/logo itba" >
+   <img src="imágenes/logo itba.png" >
   </p>
 
 ## **Alumnas:**
